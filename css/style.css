@@ -54,6 +54,13 @@ i {
 .side .user {
     height: 60px;
     background-color: #eaeaea;
+    position: relative;
+}
+
+.side .user .icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
 }
 
 .side .user i {
@@ -154,6 +161,7 @@ i {
     height: 60px;
     background-color: #eaeaea;
     display: flex;
+    position: relative;
 }
 
 .header .friend {
@@ -176,8 +184,9 @@ i {
 .header .options {
     display: flex;
     align-items: center;
-    position: relative;
-    left: 55%;
+    position: absolute;
+    top: 12px;
+    right: 5px;
 }
 
 .header .options i {

@@ -27,9 +27,11 @@
             <section class="user">
                 <img src="./img/avatar_io.jpg" alt="user">
                 <h2>Nome Utente</h2>
-                <i class="fas fa-circle-notch"></i>
-                <i class="fas fa-comment-alt"></i>
-                <i class="fas fa-ellipsis-v"></i>
+                <div class="icon">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
             </section>
 
             <!-- Notifications -->
@@ -52,22 +54,6 @@
 
             <!-- Contact -->
             <section class="contacts">
-                <!-- <div class="contact" v-for="contact in contacts">
-                    <img src="{{ avatar }}" alt="avatar 1">
-                    <h3>{{ name }}</h3>
-                </div> -->
-                <!-- <div class="contact">
-                    <img src="./img/avatar_2.jpg" alt="avatar 2">
-                    <h3>Fabio</h3>
-                </div>
-                <div class="contact">
-                    <img src="./img/avatar_3.jpg" alt="avatar 3">
-                    <h3>Samuele</h3>
-                </div>
-                <div class="contact">
-                    <img src="./img/avatar_4.jpg" alt="avatar 4">
-                    <h3>Luisa</h3>
-                </div> -->
                 <ul class="contact">
                     <li v-for="contact in contacts">
                         <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="avatar 1">
