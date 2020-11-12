@@ -70,8 +70,8 @@
                 </div> -->
                 <ul class="contact">
                     <li v-for="contact in contacts">
-                        <img :src="'./img/avatar'{{avatar}}'.jpg'" alt="avatar 1">
-                        <h3>{{ contact }}</h3>
+                        <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="avatar 1">
+                        <h3>{{ contact.name }}</h3>
                     </li>
                 </ul>
             </section>
