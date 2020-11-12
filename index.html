@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-html-css-boolzap</title>
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Vue js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    
+    <!-- APP -->
+    <div id="app" class="container">
+        <!-- Side bar -->
+        <aside class="side">
+            <section class="user">
+                <img src="./img/avatar_io.jpg" alt="user">
+                <h2>Nome Utente</h2>
+                <i class="fas fa-circle-notch"></i>
+                <i class="fas fa-comment-alt"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </section>
+
+            <!-- Notifications -->
+            <section class="notifications">
+                <div class="icon-notifications">
+                    <i class="fas fa-bell-slash"></i>
+                </div>
+                <div class="text">
+                    <h3>Ricevi notifiche di nuovi messaggi</h3>
+                    <br>
+                    <span><a href="#">Attiva notiche desktop</a></span>
+                </div>
+            </section>
+
+            <!-- Search bar -->
+            <section class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+            </section>
+
+            <!-- Contact -->
+            <section class="contacts">
+                <div class="contact">
+                    <img src="./img/avatar_1.jpg" alt="avatar 1">
+                    <h3>Michele</h3>
+                </div>
+                <div class="contact">
+                    <img src="./img/avatar_2.jpg" alt="avatar 2">
+                    <h3>Fabio</h3>
+                </div>
+                <div class="contact">
+                    <img src="./img/avatar_3.jpg" alt="avatar 3">
+                    <h3>Samuele</h3>
+                </div>
+                <div class="contact">
+                    <img src="./img/avatar_4.jpg" alt="avatar 4">
+                    <h3>Luisa</h3>
+                </div>
+            </section>
+        </aside>
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="header"></div>
+            <div class="main"></div>
+            <div class="footer"></div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* General style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #009988 0%,
+        #009988 15%,
+        #d9dbd3 15%,
+        #d9dbd3 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    height: 90%;
+    width: 80%;
+    min-width: 900px;
+}
+
+img {
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+h2 {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Side-bar */
+.side {
+    background-color: #ffffff;
+    flex-basis: 35%;
+}
+
+.side .user {
+    height: 60px;
+    background-color: #eaeaea;
+}
+
+.side .user i {
+    color: #b1b1b1;
+    position: relative;
+    left: 35%;
+    margin: 0 5px;
+}
+
+.side .notifications {
+    height: 70px;
+    background-color: #74dcff;
+    display: flex;
+}
+
+.side .notifications .icon-notifications {
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.side .notifications .icon-notifications i {
+    display: block;
+    color: #74dcff;
+    border-radius: 50%;
+    font-size: 45px;
+    background-color: #fff;
+    position: relative;
+    left: 5px;
+}
+
+.side .notifications .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.side .notifications h3 {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.side .notifications span {
+    text-align: center;
+    padding-right: 15px;
+}
+
+.side .notifications a {
+    color: #437587;
+    font-size: 14px;
+}
+
+/* Search-bar */
+.side .search-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.side .search-bar i {
+    color: #b1b1b1;
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+.side .search-bar input {
+    border: none;
+    color: #b1b1b1;
+    font-weight: 500;
+    padding: 5px;
+    width: 80%;
+}
+
+.side .contacts .contact h3 {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Main content */
+.content {
+    background: orange;
+    flex-basis: 65%;
+    
+}
