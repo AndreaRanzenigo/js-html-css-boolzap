@@ -132,7 +132,11 @@ i {
     width: 80%;
 }
 
-.side .contacts .contact h3 {
+.side .contacts ul.contact {
+    list-style: none;
+}
+
+.side .contacts .contact li h3 {
     display: inline-block;
     font-size: 15px;
     font-weight: 700;
