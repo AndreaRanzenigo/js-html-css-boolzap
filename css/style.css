@@ -41,6 +41,10 @@ h2 {
     font-weight: 500;
 }
 
+i {
+    cursor: pointer;
+}
+
 /* Side-bar */
 .side {
     background-color: #ffffff;
@@ -135,8 +139,99 @@ h2 {
 }
 
 /* Main content */
+/* Main-header */
 .content {
-    background: orange;
     flex-basis: 65%;
-    
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 60px;
+    background-color: #eaeaea;
+    display: flex;
+}
+
+.header .friend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header .friend h3 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.header .friend span {
+    color: #697376;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.header .options {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 55%;
+}
+
+.header .options i {
+    padding: 10px;
+    color: #b1b1b1;
+}
+
+/* Main */
+.main {
+    display: flex;
+    flex-grow: 1;
+    background-image: url(../img/mine.jpg);
+}
+
+/* Main footer */
+.footer {
+    height: 60px;
+    display: flex;
+    background-color: #fff;
+}
+
+.footer .smile {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .smile i {
+    color: #697376;
+    font-size: 18px;
+}
+
+.footer .text-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .text-bar input {
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    color: #858585;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.footer .registration {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .registration i {
+    color: #697376;
+    font-size: 18px;
 }
