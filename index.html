@@ -25,8 +25,8 @@
         <!-- Side bar -->
         <aside class="side">
             <section class="user">
-                <img src="./img/avatar_io.jpg" alt="user">
-                <h2>Nome Utente</h2>
+                <img :src="'./img/avatar' + user.avatar + '.jpg'" alt="user">
+                <h2>{{ user.name }}</h2>
                 <div class="icon">
                     <i class="fas fa-circle-notch"></i>
                     <i class="fas fa-comment-alt"></i>
@@ -55,7 +55,9 @@
             <!-- Contact -->
             <section class="contacts">
                 <ul class="contact">
-                    <li v-for="contact in contacts">
+                    <li class="list" 
+                    :class="['list', index == indexContact ? 'active' : null]"
+                    v-for="(contact, index) in contacts">
                         <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="avatar 1">
                         <h3>{{ contact.name }}</h3>
                     </li>
@@ -64,6 +66,7 @@
         </aside>
 
         <!-- Main content -->
+        <!-- Header -->
         <div class="content">
             <div class="header">
                 <img src="./img/avatar_1.jpg" alt="avatar 1">
@@ -78,9 +81,25 @@
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
-            <div class="main">
 
+            <!-- Main -->
+            <div class="main">
+                <div class="main-container">
+                    <div class="flex-sent">
+                        <div class="sent">
+                            <p>Hai portato a spasso il cane?</p>
+                        </div>
+                    </div>
+
+                    <div class="flex-received">
+                        <div class="received">
+                            <p>Tutto fatto!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Footer -->
             <div class="footer">
                 <div class="smile">
                     <i class="far fa-smile"></i>

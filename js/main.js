@@ -3,6 +3,7 @@
  */
 var app = new Vue({
     el: '#app',
+    indexContact: 0,
     data: {
         // nostro account
         user: {
