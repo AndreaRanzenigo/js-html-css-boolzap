@@ -30,7 +30,12 @@ var app = new Vue({
                         date: '10/01/2020 16:15:22',
                         message: 'Tutto fatto!',
                         status: 'received'
-                    }
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'newMessage',
+                        status: 'sent'
+                    },
                 ],
             },
             {
@@ -96,6 +101,7 @@ var app = new Vue({
             },
         ],
         indexContact: 0,
+        newMessage: '',
     },
 
     methods: {
@@ -103,6 +109,10 @@ var app = new Vue({
             console.log(index);
 
             this.indexContact = index;
+        },
+        addMessage() {
+            this.contacts.messages.push(this.newMessage);
+            this.newMessage = '';
         }
     }
 });

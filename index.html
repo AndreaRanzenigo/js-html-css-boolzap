@@ -103,7 +103,12 @@
                     <i class="far fa-smile"></i>
                 </div>
                 <div class="text-bar">
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input 
+                    type="text" 
+                    placeholder="Scrivi un messaggio"
+                    v-model="newMessage"
+                    @keyup.enter="addMessage"
+                    >
                 </div>
                 <div class="registration">
                     <i class="fas fa-microphone"></i>
