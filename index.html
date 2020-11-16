@@ -56,8 +56,10 @@
             <section class="contacts">
                 <ul class="contact">
                     <li class="list" 
-                    :class="['list', index == indexContact ? 'active' : null]"
-                    v-for="(contact, index) in contacts">
+                    v-for="(contact, index) in contacts"
+                    :class="['contact', index === indexContact ? 'active' : '']"
+                    @click="setIndexContact(index)"
+                    >
                         <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="avatar 1">
                         <h3>{{ contact.name }}</h3>
                     </li>
@@ -69,9 +71,9 @@
         <!-- Header -->
         <div class="content">
             <div class="header">
-                <img src="./img/avatar_1.jpg" alt="avatar 1">
+                <img :src="`./img/avatar${contacts[indexContact].avatar}.jpg`" alt="avatar 1">
                 <div class="friend">
-                    <h3>Michele</h3>
+                    <h3>{{contacts[indexContact].name}}</h3>
                     <br>
                     <span>Ultimo accesso oggi alle 10.35</span>
                 </div>
@@ -85,17 +87,13 @@
             <!-- Main -->
             <div class="main">
                 <div class="main-container">
-                    <div class="flex-sent">
-                        <div class="sent">
-                            <p>Hai portato a spasso il cane?</p>
-                        </div>
+                    <div v-for="message in contacts[indexContact].messages" 
+                    :class="['sent', message.status]">
+                        
+                            <p class="message-text">{{ message.message }}</p>
+                        
                     </div>
 
-                    <div class="flex-received">
-                        <div class="received">
-                            <p>Tutto fatto!</p>
-                        </div>
-                    </div>
                 </div>
             </div>
 

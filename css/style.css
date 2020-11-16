@@ -45,6 +45,10 @@ i {
     cursor: pointer;
 }
 
+.active {
+    background-color: #d9dbd3;
+}
+
 /* Side-bar */
 .side {
     background-color: #ffffff;
@@ -210,31 +214,30 @@ i {
     margin: 10px auto;
 }
 
-.main .flex-sent {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.main .flex-received {
+.main .sent {
     display: flex;
     justify-content: flex-start;
-}
-
-.main .sent {
+    width: 45%;
+    margin: 10px 0;
     background-color: #cbfbb3;
     padding: 15px 8px;
     border-radius: 10px;
+    position: relative;
+    left: 50%;
 }
 
 .main .received {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin: 10px 0;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 15px 8px;
+    position: relative;
+    left: 0;
 }
 
-.active {
-    background-color: #b1b1b1;
-}
 
 /* Main footer */
 .footer {
