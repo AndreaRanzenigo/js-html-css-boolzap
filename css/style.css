@@ -92,8 +92,9 @@ i {
     display: block;
     color: #74dcff;
     border-radius: 50%;
-    font-size: 45px;
+    font-size: 40px;
     background-color: #fff;
+    margin-left: 8px;
     position: relative;
     left: 5px;
 }
@@ -207,6 +208,7 @@ i {
     display: flex;
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
+    overflow-y: auto;
 }
 
 .main .main-container {
@@ -216,6 +218,7 @@ i {
 
 .main .sent {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     width: 45%;
     margin: 10px 0;
@@ -228,6 +231,7 @@ i {
 
 .main .received {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     width: 45%;
     margin: 10px 0;
@@ -238,6 +242,13 @@ i {
     left: 0;
 }
 
+.main span {
+    display: block;
+    font-size: 10px;
+    color: #b1b1b1;
+    padding-top: 5px;
+    text-align: right;
+}
 
 /* Main footer */
 .footer {

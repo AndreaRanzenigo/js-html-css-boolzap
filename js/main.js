@@ -31,11 +31,6 @@ var app = new Vue({
                         message: 'Tutto fatto!',
                         status: 'received'
                     },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        message: 'newMessage',
-                        status: 'sent'
-                    },
                 ],
             },
             {
@@ -100,6 +95,7 @@ var app = new Vue({
                 ],
             },
         ],
+        
         indexContact: 0,
         newMessage: '',
     },
@@ -110,9 +106,27 @@ var app = new Vue({
 
             this.indexContact = index;
         },
+        //Send messages
         addMessage() {
-            this.contacts.messages.push(this.newMessage);
-            this.newMessage = '';
+            if (this.newMessage.trim() !== '') {
+                
+                this.contacts[this.indexContact].messages.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    message: this.newMessage,
+                    status: 'send'
+                });
+
+                //Clean input text
+                this.newMessage = '';
+            }
+            //Received messages
+            setTimeout(() => {
+                this.contacts[this.indexContact].messages.push( {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                message: 'Ok',
+                status: 'received'
+                });
+            }, 1000 )
         }
     }
 });

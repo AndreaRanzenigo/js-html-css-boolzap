@@ -90,8 +90,10 @@
                     <div v-for="message in contacts[indexContact].messages" 
                     :class="['sent', message.status]">
                         
-                            <p class="message-text">{{ message.message }}</p>
+                        <p class="message-text">{{ message.message }}</p>
                         
+                        <!-- Date message -->
+                        <span>{{ message.date }}</span>
                     </div>
 
                 </div>
@@ -118,6 +120,7 @@
     </div>
 
     <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.6/dayjs.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
